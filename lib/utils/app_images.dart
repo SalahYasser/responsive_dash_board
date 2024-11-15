@@ -1,4 +1,4 @@
-abstract class Assets {
+class Assets {
   // Assets._();
   
   /// Assets for imagesAvatar1
