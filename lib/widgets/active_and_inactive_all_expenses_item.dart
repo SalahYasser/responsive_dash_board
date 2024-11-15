@@ -77,7 +77,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             AllExpensesItemHeader(
               image: itemModel.image,
               imageColor: Colors.white,
-              colorIcon: Colors.black,
+              colorIcon: Colors.white,
             ),
             const SizedBox(height: 34),
             Text(
@@ -87,7 +87,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               itemModel.date,
-              style: Styles.styleRegular14.copyWith(color: Colors.white),
+              style: Styles.styleRegular14.copyWith(color: Color(0xffFAFAFA)),
             ),
             const SizedBox(height: 16),
             Text(

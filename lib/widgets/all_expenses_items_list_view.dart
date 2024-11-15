@@ -12,8 +12,7 @@ class AllExpensesItemsListView extends StatefulWidget {
 }
 
 class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
-
-  static const List<AllExpensesItemModel> itemModel = [
+  final items = [
     AllExpensesItemModel(
       image: Assets.imagesBalance,
       title: 'Balance',
@@ -38,29 +37,43 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
-      itemCount: itemModel.length,
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) {
-        return GestureDetector(
-          onTap: () {
-            if (activeIndex != index) {
-              setState(() {
-                activeIndex = index;
-              });
-            }
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(right: 12),
+    return Row(children: items.asMap().entries.map((e) {
+      int index = e.key;
+      var item = e.value;
+      if (index == 1) {
+        return Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(index);
+            },
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: AllExpensesItem(
+                  itemModel: item, isActive: activeIndex == index),
+            ),
+          ),
+        );
+      } else {
+        return Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(index);
+            },
             child: AllExpensesItem(
-              itemModel: itemModel[index],
+              itemModel: item,
               isActive: activeIndex == index,
             ),
           ),
         );
-      },
-    );
+      }
+    }).toList());
+  }
+
+  void updateIndex(int index) {
+    setState(() {
+      if (activeIndex != index) {
+        activeIndex = index;
+      }
+    });
   }
 }

@@ -5,8 +5,7 @@ class AllExpensesItemHeader extends StatelessWidget {
   const AllExpensesItemHeader({super.key, required this.image, this.imageColor, this.colorIcon});
 
   final String image;
-  final Color? imageColor;
-  final Color? colorIcon;
+  final Color? imageColor, colorIcon;
 
   @override
   Widget build(BuildContext context) {
