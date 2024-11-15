@@ -3,15 +3,15 @@ import 'package:responsive_dash_board/models/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
 
-class AllExpensesItemListView extends StatefulWidget {
-  const AllExpensesItemListView({super.key});
+class AllExpensesItemsListView extends StatefulWidget {
+  const AllExpensesItemsListView({super.key});
 
   @override
-  State<AllExpensesItemListView> createState() =>
-      _AllExpensesItemListViewState();
+  State<AllExpensesItemsListView> createState() =>
+      _AllExpensesItemsListViewState();
 }
 
-class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
+class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
 
   static const List<AllExpensesItemModel> itemModel = [
     AllExpensesItemModel(
@@ -46,10 +46,11 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
       itemBuilder: (context, index) {
         return GestureDetector(
           onTap: () {
-            setState(() {
-              activeIndex = index;
-              print(activeIndex);
-            });
+            if (activeIndex != index) {
+              setState(() {
+                activeIndex = index;
+              });
+            }
           },
           child: Padding(
             padding: const EdgeInsets.only(right: 12),

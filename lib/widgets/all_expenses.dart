@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_header.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_item_list_view.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_items_list_view.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
@@ -22,7 +22,7 @@ class AllExpenses extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                Expanded(child: AllExpensesItemListView()),
+                Expanded(child: AllExpensesItemsListView()),
               ],
             ),
           ),
