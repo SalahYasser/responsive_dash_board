@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
-import 'package:responsive_dash_board/widgets/custom_text_field.dart';
 import 'package:responsive_dash_board/widgets/latest_transaction_list_view.dart';
+import 'package:responsive_dash_board/widgets/title_text_field.dart';
 
 class LatestTransactionSection extends StatelessWidget {
   const LatestTransactionSection({super.key});
@@ -18,8 +18,12 @@ class LatestTransactionSection extends StatelessWidget {
         SizedBox(height: 12),
         LatestTransactionListView(),
         Divider(height: 48),
-        CustomTextField(),
+        TitleTextField(
+          text: 'Customer name',
+          hint: 'Type customer name',
+        ),
       ],
     );
   }
 }
+
