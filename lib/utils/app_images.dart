@@ -11,6 +11,10 @@ class Assets {
 
   /// Assets for imagesBalance
   /// assets/images/balance.svg
+  static const String imagesAvatar3 = "assets/images/avatar_3.svg";
+
+  /// Assets for imagesBalance
+  /// assets/images/balance.svg
   static const String imagesBalance = "assets/images/balance.svg";
 
   /// Assets for imagesCardBackground
