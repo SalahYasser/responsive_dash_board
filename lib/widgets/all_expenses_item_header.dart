@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
+  const AllExpensesItemHeader({super.key, required this.image, this.colorIcon});
 
   final String image;
+  final Color? colorIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +14,8 @@ class AllExpensesItemHeader extends StatelessWidget {
         Container(
           width: 60,
           height: 60,
-          decoration: const ShapeDecoration(
-            color: Color(0xffFAFAFA),
+          decoration: ShapeDecoration(
+            color: Colors.white10,
             shape: OvalBorder(),
           ),
           child: Center(
@@ -22,7 +23,10 @@ class AllExpensesItemHeader extends StatelessWidget {
           ),
         ),
         const Spacer(),
-        Icon(Icons.arrow_forward_ios_outlined),
+        Icon(
+          Icons.arrow_forward_ios_outlined,
+          color: colorIcon,
+        ),
       ],
     );
   }
