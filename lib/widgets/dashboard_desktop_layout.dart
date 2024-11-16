@@ -3,6 +3,7 @@ import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_and_quick_transaction_section.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/my_cards_section.dart';
+import 'package:responsive_dash_board/widgets/transaction_history_header.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -26,7 +27,7 @@ class DashboardDesktopLayout extends StatelessWidget {
                 child: MyCardsSection(),
               ),
               Expanded(
-                child: TransactionHistoryHeader(),
+                child: TransactionHistory(),
               ),
             ],
           ),
@@ -36,24 +37,23 @@ class DashboardDesktopLayout extends StatelessWidget {
   }
 }
 
-class TransactionHistoryHeader extends StatelessWidget {
-  const TransactionHistoryHeader({super.key});
+class TransactionHistory extends StatelessWidget {
+  const TransactionHistory({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        TransactionHistoryHeader(),
+        SizedBox(height: 20),
         Text(
-          'Transaction History',
-          style: Styles.styleSemiBold20,
-        ),
-        Text(
-          'See all',
+          '13 April 2022',
           style: Styles.styleMedium16.copyWith(
-            color: Color(0xff4EB7F2),
+            color: Color(0xffAAAAAA),
           ),
         ),
+
       ],
     );
   }
