@@ -14,6 +14,7 @@ class IncomeSection extends StatelessWidget {
           CustomHeader(text: 'Income'),
           Expanded(
             child: Row(
+               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Expanded(
                   child: IncomeChart(),
