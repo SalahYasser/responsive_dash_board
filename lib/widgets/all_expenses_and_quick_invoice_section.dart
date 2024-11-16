@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/widgets/quick_in_voice.dart';
 
-class AllExpensesAndQuickTransactionSection extends StatelessWidget {
-  const AllExpensesAndQuickTransactionSection({super.key});
+class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
+  const AllExpensesAndQuickInvoiceSection({super.key});
 
   @override
   Widget build(BuildContext context) {
