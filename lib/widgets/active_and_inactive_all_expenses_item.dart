@@ -13,8 +13,6 @@ class InActiveAllExpensesItem extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Container(
-        width: MediaQuery.sizeOf(context).width * 0.2,
-        height: MediaQuery.sizeOf(context).height * 0.320,
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         decoration: ShapeDecoration(
           color: Colors.white,
@@ -61,8 +59,6 @@ class ActiveAllExpensesItem extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Container(
-        width: MediaQuery.sizeOf(context).width * 0.2,
-        height: MediaQuery.sizeOf(context).height * 0.320,
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         decoration: ShapeDecoration(
           color: const Color(0xff4EB7F2),
