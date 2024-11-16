@@ -37,7 +37,7 @@ abstract class Styles {
   );
 
   static const TextStyle styleSemiBold20 = TextStyle(
-    color: Color(0xff064060),
+    color: Color(0xff064061),
     fontSize: 20,
     fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
