@@ -4,8 +4,8 @@ import 'package:responsive_dash_board/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/widgets/income_section.dart';
 import 'package:responsive_dash_board/widgets/my_cards_and_transaction_history_section.dart';
 
-class DashboardDesktopLayout extends StatelessWidget {
-  const DashboardDesktopLayout({super.key});
+class DashBoardDesktopLayout extends StatelessWidget {
+  const DashBoardDesktopLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,12 +14,11 @@ class DashboardDesktopLayout extends StatelessWidget {
         Expanded(child: CustomDrawer()),
         SizedBox(width: 32),
         Expanded(
-          flex: 3,
+          flex: 2,
           child: AllExpensesAndQuickInvoiceSection(),
         ),
         SizedBox(width: 24),
         Expanded(
-          flex: 2,
           child: Column(
             children: [
               SizedBox(height: 40),

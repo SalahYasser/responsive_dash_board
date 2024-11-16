@@ -26,21 +26,21 @@ class _MyCardsSectionState extends State<MyCardsSection> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 420,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 420,
+          child: Text(
             'My card',
             style: Styles.styleSemiBold20,
           ),
-          SizedBox(height: 20),
-          MyCardsPageView(pageController: pageController),
-          SizedBox(height: 20),
-          DotsIndicator(currentPageIndex: currentPageIndex),
-        ],
-      ),
+        ),
+        SizedBox(height: 20),
+        MyCardsPageView(pageController: pageController),
+        SizedBox(height: 20),
+        DotsIndicator(currentPageIndex: currentPageIndex),
+      ],
     );
   }
 }

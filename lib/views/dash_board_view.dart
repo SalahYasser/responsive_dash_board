@@ -12,8 +12,8 @@ class DashBoardView extends StatelessWidget {
       backgroundColor: Color(0xffEFEFEF),
       body: AdaptiveLayout(
         mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) => const DashboardTabletLayout(),
-        desktopLayout: (context) => const DashboardDesktopLayout(),
+        tabletLayout: (context) => const DashBoardTabletLayout(),
+        desktopLayout: (context) => const DashBoardDesktopLayout(),
       ),
     );
   }
