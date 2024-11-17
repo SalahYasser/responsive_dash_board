@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/income_chart.dart';
 import 'package:responsive_dash_board/widgets/income_details.dart';
 
@@ -9,18 +10,19 @@ class IncomeSectionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
 
-    return width >= 1200 && width < 1750
-        ? Row(
-            mainAxisAlignment: MainAxisAlignment.start,
+    return width >= SizeConfig.desktop && width < 1750
+        ? SizedBox()
+        : Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 child: IncomeChart(),
               ),
               Expanded(
+                flex: 2,
                 child: IncomeDetails(),
               ),
             ],
-          )
-        : SizedBox();
+          );
   }
 }
