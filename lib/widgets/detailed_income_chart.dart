@@ -30,6 +30,7 @@ class _IncomeChartState extends State<DetailedIncomeChart> {
           setState(() {});
         },
       ),
+
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
@@ -41,6 +42,7 @@ class _IncomeChartState extends State<DetailedIncomeChart> {
           color: Color(0xff208CC8),
           radius: activeIndex == 0 ? 60 : 50,
         ),
+
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 1 ? 2.2 : null,
           titleStyle: Styles.styleMedium16
@@ -50,6 +52,7 @@ class _IncomeChartState extends State<DetailedIncomeChart> {
           color: Color(0xff4EB7F2),
           radius: activeIndex == 1 ? 60 : 50,
         ),
+
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 2 ? 1.2 : null,
           titleStyle: Styles.styleMedium16
@@ -59,6 +62,7 @@ class _IncomeChartState extends State<DetailedIncomeChart> {
           color: Color(0xff064061),
           radius: activeIndex == 2 ? 60 : 50,
         ),
+
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 3 ? 1.4 : null,
           titleStyle: Styles.styleMedium16
@@ -68,6 +72,7 @@ class _IncomeChartState extends State<DetailedIncomeChart> {
           color: Color(0xffE2DECD),
           radius: activeIndex == 3 ? 60 : 50,
         ),
+
       ],
     );
   }
