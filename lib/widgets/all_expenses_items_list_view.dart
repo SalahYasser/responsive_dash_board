@@ -37,35 +37,22 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: items.asMap().entries.map((e) {
+    return Row(
+        children: items.asMap().entries.map((e) {
       int index = e.key;
       var item = e.value;
-      if (index == 1) {
-        return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              updateIndex(index);
-            },
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: AllExpensesItem(
-                  itemModel: item, isActive: activeIndex == index),
-            ),
-          ),
-        );
-      } else {
-        return Expanded(
-          child: GestureDetector(
-            onTap: () {
-              updateIndex(index);
-            },
+      return Expanded(
+        child: GestureDetector(
+          onTap: () {
+            updateIndex(index);
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
             child: AllExpensesItem(
-              itemModel: item,
-              isActive: activeIndex == index,
-            ),
+                itemModel: item, isActive: activeIndex == index),
           ),
-        );
-      }
+        ),
+      );
     }).toList());
   }
 
