@@ -13,7 +13,7 @@ class CustomHeader extends StatelessWidget {
       children: [
         Text(
           text,
-          style: Styles.styleSemiBold20,
+          style: Styles.styleSemiBold20(context),
         ),
         const Expanded(child: SizedBox()),
         const RangeOptions(),
