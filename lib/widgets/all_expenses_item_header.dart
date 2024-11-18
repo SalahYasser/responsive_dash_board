@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image, this.imageColor, this.colorIcon});
+  const AllExpensesItemHeader(
+      {super.key, required this.image, this.imageColor, this.colorIcon});
 
   final String image;
   final Color? imageColor, colorIcon;
@@ -12,18 +13,23 @@ class AllExpensesItemHeader extends StatelessWidget {
     return Row(
       children: [
         Flexible(
-          child: AspectRatio(
-            aspectRatio: 1,
-            child: Container(
-              decoration: ShapeDecoration(
-                color: Colors.white10,
-                shape: OvalBorder(),
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  image,
-                  colorFilter: ColorFilter.mode(
-                      imageColor ?? Color(0xff4EB7F2), BlendMode.srcIn),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 60,
+            ),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: Colors.white10,
+                  shape: OvalBorder(),
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    image,
+                    colorFilter: ColorFilter.mode(
+                        imageColor ?? Color(0xff4EB7F2), BlendMode.srcIn),
+                  ),
                 ),
               ),
             ),
